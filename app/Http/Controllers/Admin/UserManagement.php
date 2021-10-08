@@ -159,12 +159,12 @@ class UserManagement extends Controller
     public function store_roles(Request $request)
     {
 
-        if ($request->get('password') != $request->get('confirm_password')) {
-            session()->flash('notification-status', "error");
-            session()->flash('notification-msg', "Password not match.");
+        $validator =  $request->validate([
+            'role' => 'required',
+            'description' => 'required'
+        ]);
 
-            goto callback;
-        }
+
 
         DB::beginTransaction();
         try {
@@ -206,6 +206,12 @@ class UserManagement extends Controller
 
     public function update_role(Request $request)
     {
+
+        $validator =  $request->validate([
+            'role' => 'required',
+            'description' => 'required'
+        ]);
+
 
         DB::beginTransaction();
 
