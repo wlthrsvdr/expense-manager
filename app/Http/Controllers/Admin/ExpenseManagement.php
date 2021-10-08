@@ -202,7 +202,7 @@ class ExpenseManagement extends Controller
 
         $validator =  $request->validate([
             'category' => 'required',
-            'descriptions' => 'required'
+            'description' => 'required'
         ]);
 
         DB::beginTransaction();

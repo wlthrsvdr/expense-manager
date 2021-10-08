@@ -22,7 +22,7 @@ $('#update_category_form').submit(function (e) {
             location.reload();
         },
         error: function (err) {
-
+            $('#update_category_modal').modal('hide');
         }
     });
 
@@ -49,13 +49,13 @@ function getCategoryInfo(id) {
 
         },
         error: function (err) {
+        
             console.log(err, "error");
         }
     });
 }
 
 function deleteCategory(id) {
-    console.log(id, "iddd")
     $('#delete_prompt_modal').modal('show');
 
     $("#yes_delete").click(function () {
