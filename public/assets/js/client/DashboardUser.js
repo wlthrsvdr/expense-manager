@@ -14,14 +14,11 @@ $(document).ready(function () {
         data: "data",
         dataType: "json",
         success: function (res) {
-            // console.log(res, "Res")
             drawChart(res)
-
-            console.log(res)
 
         },
         error: function (err) {
-            console.log(err, "error");
+
         }
     });
 

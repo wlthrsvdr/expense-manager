@@ -242,34 +242,33 @@
     <script type="text/javascript" src="/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 
-    {{-- <script type="text/javascript" src="/assets/js/{{ $js }}"></script> --}}
-    <script type="text/javascript" src="/assets/js/UserManagement.js"></script>
+    <script type="text/javascript" src="/assets/js/{{ $js }}"></script>
+
+    {{-- <script type="text/javascript" src="/assets/js/UserManagement.js"></script> --}}
 
     <script type="text/javascript" src="/assets/js/Role.js"></script>
 
-    <script type="text/javascript" src="/assets/js/ExpenseCategory.js"></script>
+    {{-- <script type="text/javascript" src="/assets/js/ExpenseCategory.js"></script> --}}
 
-    <script type="text/javascript" src="/assets/js/Expenses.js"></script>
+    {{-- <script type="text/javascript" src="/assets/js/Expenses.js"></script> --}}
 
-    <script type="text/javascript" src="/assets/js/Dashboard.js"></script>
 
-    <script type="text/javascript" src="/assets/js/client/DashboardUser.js"></script>
+
+    {{-- @if (Auth::guard('admin')->check())
+        <script type="text/javascript" src="/assets/js/Dashboard.js"></script>
+    @elseif(Auth::guard('client')->check())
+        <script type="text/javascript" src="/assets/js/client/DashboardUser.js"></script>
+    @endif --}}
+
+
 
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
 
-    <script>
+    {{-- <script>
         $.widget.bridge('uibutton', $.ui.button)
-    </script>
+    </script> --}}
 
-    <script type="text/javascript">
-        $(function() {
-            $('.input-daterange').datepicker({
-                format: "yyyy-mm-dd"
-            });
-
-        })
-    </script>
 
     <script type="text/javascript" src={{ asset('assets/js/bootstrap-datepicker.min.js') }}>
     </script>
@@ -299,7 +298,6 @@
 
     <script type="text/javascript" src="/assets/dist/js/demo.js"></script>
 
-    @yield('page-scripts')
 
 
 </body>

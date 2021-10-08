@@ -16,7 +16,7 @@ class UserManagement extends Controller
 
     public function __construct()
     {
-        $this->data['js'] = "Role.js";
+        $this->data['js'] = "UserManagement.js";
         $this->middleware('system.guest', ['except' => "logout"]);
     }
 
@@ -92,8 +92,6 @@ class UserManagement extends Controller
     {
 
         $validator =  $request->validate([
-            'email' => 'required|email|unique:users',
-            'password' => 'required',
             'user_role' => 'required'
         ]);
 

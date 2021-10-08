@@ -16,6 +16,7 @@ class MainController extends Controller
         parent::__construct();
         array_merge($this->data, parent::get_data());
         $this->data['page_title'] .= " :: Dashboard";
+        $this->data['js'] = "Dashboard.js";
     }
 
 

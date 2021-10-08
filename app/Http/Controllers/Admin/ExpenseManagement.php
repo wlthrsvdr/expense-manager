@@ -160,6 +160,10 @@ class ExpenseManagement extends Controller
     public function store_category(Request $request)
     {
 
+        $validator =  $request->validate([
+            'category' => 'required',
+            'descriptions' => 'required'
+        ]);
 
         DB::beginTransaction();
         try {
@@ -196,6 +200,11 @@ class ExpenseManagement extends Controller
     public function update_category(Request $request)
     {
 
+        $validator =  $request->validate([
+            'category' => 'required',
+            'descriptions' => 'required'
+        ]);
+
         DB::beginTransaction();
 
         try {
@@ -224,9 +233,6 @@ class ExpenseManagement extends Controller
             $category = Category::find($id);
 
             $category->delete();
-
-
-
             DB::commit();
 
             session()->flash('notification-status', "success");
