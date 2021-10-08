@@ -102,7 +102,10 @@
                         <div class="col-sm-12">
                             <div class="info">
                                 @if (Auth::guard('admin')->check())
+                                    <span style="color:#eee">User Name:</span>
                                     <a class="d-block"> {{ Auth::guard('admin')->user()->name }}</a>
+                                    <span style="color:#eee">User Role:</span>
+                                    <a class="d-block"> {{ Auth::guard('admin')->user()->user_role }}</a>
                                 @elseif(Auth::guard('client')->check())
                                     <a class="d-block"> {{ Auth::guard('client')->user()->name }}</a>
                                 @endif
