@@ -251,9 +251,9 @@
 
     <script type="text/javascript" src="/assets/js/Role.js"></script>
 
-    {{-- <script type="text/javascript" src="/assets/js/ExpenseCategory.js"></script> --}}
+    <script type="text/javascript" src="/assets/js/ExpenseCategory.js"></script>
 
-    {{-- <script type="text/javascript" src="/assets/js/Expenses.js"></script> --}}
+    <script type="text/javascript" src="/assets/js/Expenses.js"></script>
 
 
 

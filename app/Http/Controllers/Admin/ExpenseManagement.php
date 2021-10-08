@@ -16,7 +16,7 @@ class ExpenseManagement extends Controller
 
     public function __construct()
     {
-        $this->data['js'] = "ExpenseManagement.js";
+        $this->data['js'] = "Expenses.js";
         $this->middleware('system.guest', ['except' => "logout"]);
     }
 
